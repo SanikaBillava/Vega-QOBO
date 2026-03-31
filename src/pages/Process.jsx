@@ -1,8 +1,9 @@
 import{ClipboardCheck,Calendar,Hammer,CheckCircle}from'lucide-react';
+const bgTexture=new URL('../../bg-texture.jpg',import.meta.url).href;
 function Process(){
 const steps=[{icon:ClipboardCheck,num:'01',title:'Consultation',desc:'We start with a free consultation to understand your needs and provide expert recommendations.'},{icon:Calendar,num:'02',title:'Planning',desc:'Our team creates a detailed project plan, timeline, and transparent quote for your approval.'},{icon:Hammer,num:'03',title:'Execution',desc:'Our skilled craftsmen bring your vision to life with precision and quality materials.'},{icon:CheckCircle,num:'04',title:'Completion',desc:'Final walkthrough and inspection to ensure 100% satisfaction before project sign-off.'}];
 return(
-<div className="bg-cream">
+<div className="bg-cream" style={{backgroundImage:`linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url(${bgTexture})`,backgroundRepeat:'repeat',backgroundSize:'auto'}}>
 <section className="py-16">
 <div className="max-w-7xl mx-auto px-4">
 <div className="text-center mb-12">

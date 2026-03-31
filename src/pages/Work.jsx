@@ -1,10 +1,11 @@
 import{useState}from'react';
 import{ChevronLeft,ChevronRight}from'lucide-react';
+const bgTexture=new URL('../../bg-texture.jpg',import.meta.url).href;
 function Work(){
 const projects=[{id:1,title:'Driveway Installation',desc:'Complete driveway transformation in McKinney, TX',img:'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80'},{id:2,title:'Paver Patio',desc:'Beautiful backyard patio in Frisco, TX',img:'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80'},{id:3,title:'Concrete Walkway',desc:'Elegant walkway installation in Plano, TX',img:'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'},{id:4,title:'Drainage System',desc:'Professional drainage solution in Allen, TX',img:'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=800&q=80'}];
 const[before,setBefore]=useState(true);
 return(
-<div className="bg-cream">
+<div className="bg-cream" style={{backgroundImage:`linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url(${bgTexture})`,backgroundRepeat:'repeat',backgroundSize:'auto'}}>
 <section className="py-16">
 <div className="max-w-7xl mx-auto px-4">
 <div className="text-center mb-12">

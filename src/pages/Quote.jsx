@@ -1,6 +1,7 @@
+const bgTexture=new URL('../../bg-texture.jpg',import.meta.url).href;
 function Quote(){
 return(
-<div className="bg-cream">
+<div className="bg-cream" style={{backgroundImage:`linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url(${bgTexture})`,backgroundRepeat:'repeat',backgroundSize:'auto'}}>
 <section className="py-16">
 <div className="max-w-3xl mx-auto px-4">
 <div className="text-center mb-12">

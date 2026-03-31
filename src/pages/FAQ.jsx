@@ -1,10 +1,11 @@
 import{useState}from'react';
 import{ChevronDown,ChevronUp}from'lucide-react';
+const bgTexture=new URL('../../bg-texture.jpg',import.meta.url).href;
 function FAQ(){
 const faqs=[{q:'How long does a typical project take?',a:'Most residential projects are completed within 3-7 days, depending on size and complexity. We provide a detailed timeline during the consultation.'},{q:'Do you offer warranties?',a:'Yes! All our work comes with a warranty. Concrete installations have a 5-year warranty, and materials are covered by manufacturer warranties.'},{q:'What areas do you serve?',a:'We proudly serve 8+ cities across Texas including Blue Ridge, McKinney, Frisco, Melissa, Celina, Plano, Allen, and Leonard.'},{q:'How much does a project cost?',a:'Costs vary based on project size, materials, and complexity. Contact us for a free, no-obligation quote tailored to your needs.'},{q:'What payment methods do you accept?',a:'We accept cash, checks, and all major credit cards. Payment terms are discussed during the consultation.'}];
 const[open,setOpen]=useState(null);
 return(
-<div className="bg-cream">
+<div className="bg-cream" style={{backgroundImage:`linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url(${bgTexture})`,backgroundRepeat:'repeat',backgroundSize:'auto'}}>
 <section className="py-16">
 <div className="max-w-4xl mx-auto px-4">
 <div className="text-center mb-12">

@@ -1,8 +1,9 @@
 import{Users,Award,Target,Shield}from'lucide-react';
+const bgTexture=new URL('../../bg-texture.jpg',import.meta.url).href;
 function About(){
 const vals=[{icon:Users,title:'Customer First',desc:'Your satisfaction is our top priority'},{icon:Award,title:'Excellence',desc:'We deliver nothing but the best'},{icon:Target,title:'Precision',desc:'Every detail matters to us'},{icon:Shield,title:'Trust',desc:'Licensed, insured, and reliable'}];
 return(
-<div className="bg-cream">
+<div className="bg-cream" style={{backgroundImage:`linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url(${bgTexture})`,backgroundRepeat:'repeat',backgroundSize:'auto'}}>
 <section className="py-16">
 <div className="max-w-7xl mx-auto px-4">
 <div className="text-center mb-12">

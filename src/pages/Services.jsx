@@ -2,10 +2,11 @@ import{Truck,Droplet,Blocks,Wine,Palette}from'lucide-react';
 import servicesData from'../data/services.json';
 import{Link}from'react-router-dom';
 import{PHONE}from'../constants';
+const bgTexture=new URL('../../bg-texture.jpg',import.meta.url).href;
 function Services(){
 const iconMap={Truck,Droplet,Blocks,Wine,Palette};
 return(
-<div className="bg-charcoal text-white">
+<div className="bg-charcoal text-white" style={{backgroundImage:`linear-gradient(rgba(31,31,31,0.85), rgba(31,31,31,0.85)), url(${bgTexture})`,backgroundRepeat:'repeat',backgroundSize:'auto'}}>
 <section className="py-16">
 <div className="max-w-7xl mx-auto px-4">
 <div className="text-center mb-12">
