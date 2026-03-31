@@ -83,7 +83,7 @@ function Services() {
       {/* CTA Section */}
       <section className="bg-gold relative py-20 px-4 overflow-hidden">
         <div className="max-w-3xl mx-auto text-center relative z-10">
-          <h2 className="font-serif text-4xl text-charcoal mb-4">Ready to Upgrade Your Space?</h2>
+          <h2 className="font-serif text-4xl text-charcoal mb-4">Get in Touch?</h2>
           <p className="text-charcoal/90 mb-10 font-sans text-sm md:text-base max-w-xl mx-auto leading-relaxed font-medium">
             Get a free quote today and bring your vision to life.
           </p>
