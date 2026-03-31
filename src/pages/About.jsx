@@ -1,56 +1,92 @@
-import{Users,Award,Target,Shield}from'lucide-react';
-const bgTexture=new URL('../../bg-texture.jpg',import.meta.url).href;
-function About(){
-const vals=[{icon:Users,title:'Customer First',desc:'Your satisfaction is our top priority'},{icon:Award,title:'Excellence',desc:'We deliver nothing but the best'},{icon:Target,title:'Precision',desc:'Every detail matters to us'},{icon:Shield,title:'Trust',desc:'Licensed, insured, and reliable'}];
-return(
-<div className="bg-cream" style={{backgroundImage:`linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url(${bgTexture})`,backgroundRepeat:'repeat',backgroundSize:'auto'}}>
-<section className="py-16">
-<div className="max-w-7xl mx-auto px-4">
-<div className="text-center mb-12">
-<p className="text-gold font-sans text-sm mb-2">WHO WE ARE</p>
-<h1 className="font-serif text-5xl text-charcoal mb-6">About Vega Decorative Concrete</h1>
-<div className="h-1 w-24 bg-gold mx-auto mb-8"></div>
+import { Users, Award, Target, Shield } from 'lucide-react';
+
+// Ensure the path to your texture is correct
+const bgTexture = new URL('../../bg-texture.jpg', import.meta.url).href;
+const aboutImage = new URL('../../about-1.jpeg', import.meta.url).href;
+
+function About() {
+  const bulletPoints = [
+    "Licensed & Insured Professionals",
+    "Premium-Grade Materials Only",
+    "On-Time, Every Project",
+    "Free, No-Obligation Estimates"
+  ];
+
+  return (
+    /* 1. Changed bg-cream to bg-transparent and added the style object to handle the texture layering */
+    <div 
+      className="relative py-20 px-4 overflow-hidden bg-transparent"
+      style={{
+        backgroundImage: `linear-gradient(rgba(253, 251, 247, 0.9), rgba(253, 251, 247, 0.9)), url(${bgTexture})`,
+        backgroundRepeat: 'repeat',
+        backgroundSize: 'auto'
+      }}
+    >
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+        
+        {/* --- LEFT SIDE: THE OVERLAPPING IMAGE BOXES --- */}
+        <div className="relative h-[450px] w-full max-w-[500px] mx-auto lg:mx-0">
+          {/* Large Image Box */}
+          <div className="absolute top-0 left-0 w-[85%] h-[90%] bg-[#1A1A1A] rounded-sm shadow-2xl overflow-hidden">
+            <img src={aboutImage} alt="About Vega project" className="w-full h-full object-cover opacity-90" />
+          </div>
+
+        {/* Small Gold Box (Refined & Compact) */}
+<div className="absolute bottom-4 -right-4 w-[40%] h-[45%] bg-[#D4AF37] rounded-sm shadow-2xl flex flex-col items-center justify-center p-6 text-center z-20 border border-white/10 transform hover:scale-105 transition-transform duration-300">
+  
+  {/* 1. Main Heading: Bold and tight */}
+  <h2 className="font-serif text-3xl md:text-4xl text-charcoal mb-0 leading-none tracking-tight">
+    Texas
+  </h2>
+
+  {/* 2. Divider: Very thin and short */}
+  <div className="w-8 h-[1px] bg-charcoal/20 my-3"></div>
+
+  {/* 3. Subtext: Micro-typography style */}
+  <p className="font-sans text-[8px] md:text-[9px] tracking-[0.3em] font-black text-charcoal uppercase leading-tight">
+    Proudly<br/>
+    Serving All<br/>
+    Across Texas
+  </p>
+  
 </div>
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-<div>
-<p className="text-gray-700 text-lg mb-6">At Vega Decorative Concrete, we specialize in delivering high-quality concrete and outdoor installation services across Texas. Whether you're upgrading your driveway, installing drainage, or enhancing your outdoor space with pavers, we bring precision, durability, and craftsmanship to every project.</p>
-<p className="text-gray-700 text-lg mb-6">Our team of skilled professionals is committed to exceeding expectations — on time, every time.</p>
-<ul className="space-y-3">
-<li className="flex items-center space-x-3 text-gray-700">
-<span className="text-gold text-xl">●</span>
-<span>Licensed & Insured Professionals</span>
-</li>
-<li className="flex items-center space-x-3 text-gray-700">
-<span className="text-gold text-xl">●</span>
-<span>Serving 8+ Cities Across Texas</span>
-</li>
-<li className="flex items-center space-x-3 text-gray-700">
-<span className="text-gold text-xl">●</span>
-<span>100% Customer Satisfaction Guarantee</span>
-</li>
-</ul>
-</div>
-<div className="bg-gradient-to-br from-gold to-yellow-600 p-12 rounded-lg shadow-xl text-center">
-<h2 className="font-serif text-6xl text-white mb-4">TEXAS</h2>
-<p className="text-white text-xl font-semibold">PROUDLY SERVING ALL ACROSS TEXAS</p>
-</div>
-</div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-{vals.map((v,i)=>{
-const Icon=v.icon;
-return(
-<div key={i} className="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition">
-<div className="flex justify-center mb-4">
-<Icon className="text-gold" size={48}/>
-</div>
-<h3 className="font-serif text-xl text-charcoal mb-2">{v.title}</h3>
-<p className="text-gray-600">{v.desc}</p>
-</div>
-);})}
-</div>
-</div>
-</section>
-</div>
-);
+        </div>
+
+        {/* --- RIGHT SIDE: THE CONTENT --- */}
+        <div className="flex flex-col">
+          <p className="text-[#D4AF37] font-sans text-[10px] tracking-[0.2em] font-bold mb-4 uppercase">
+            WHO WE ARE
+          </p>
+          
+          <h1 className="font-serif text-5xl md:text-6xl text-charcoal leading-tight mb-4">
+            About Vega Decorative<br />Concrete
+          </h1>
+          
+          <div className="h-[2px] w-12 bg-[#D4AF37] mb-8"></div>
+
+          <div className="space-y-6 max-w-xl">
+            <p className="text-charcoal/80 font-sans leading-relaxed text-sm">
+              At Vega Decorative Concrete, we specialize in delivering high-quality concrete and outdoor installation services across Texas. Whether you're upgrading your driveway, installing drainage, or enhancing your outdoor space with pavers, we bring precision, durability, and craftsmanship to every project.
+            </p>
+            
+            <p className="text-charcoal/80 font-sans leading-relaxed text-sm">
+              Our team of skilled professionals is committed to exceeding expectations — on time, every time.
+            </p>
+
+            <ul className="space-y-4 pt-4">
+              {bulletPoints.map((item, index) => (
+                <li key={index} className="flex items-center space-x-3 text-charcoal/80 font-sans font-bold text-sm">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#D4AF37]"></span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
 }
+
 export default About;
