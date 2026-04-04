@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { PHONE } from '../constants';
 
 // using hero image from project root
-const heroImage = new URL('../../hero-img.png', import.meta.url).href;
+const heroImage = new URL('../../stain-flip.jpeg', import.meta.url).href;
 
 function Hero() {
   return (

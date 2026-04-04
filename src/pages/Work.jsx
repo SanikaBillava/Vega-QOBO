@@ -5,10 +5,10 @@ const bgTexture = new URL('../../bg-texture.jpg', import.meta.url).href;
 
 function Work() {
   const projects = [
-    { id: 1, title: 'Driveway Installation', desc: 'Complete driveway transformation in McKinney, TX', img: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80' },
-    { id: 2, title: 'Paver Patio', desc: 'Beautiful backyard patio in Frisco, TX', img: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80' },
-    { id: 3, title: 'Concrete Walkway', desc: 'Elegant walkway installation in Plano, TX', img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80' },
-    { id: 4, title: 'Drainage System', desc: 'Professional drainage solution in Allen, TX', img: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=800&q=80' }
+    { id: 1, title: 'Driveway Installation', desc: 'Complete driveway transformation in McKinney, TX', img: new URL('../../driveway.jpeg', import.meta.url).href  },
+    { id: 2, title: 'Paver Patio', desc: 'Beautiful backyard patio in Frisco, TX', img: new URL('../../gallery.jpeg', import.meta.url).href },
+    { id: 3, title: 'Concrete Walkway', desc: 'Elegant walkway installation in Plano, TX', img: new URL('../../concrete.jpeg', import.meta.url).href  },
+    { id: 4, title: 'Drainage System', desc: 'Professional drainage solution in Allen, TX', img: new URL('../../drainage-flip.jpeg', import.meta.url).href  }
   ];
 
   // --- NEW SLIDER STATE ---
@@ -19,7 +19,7 @@ function Work() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-gold font-sans text-[10px] tracking-[0.2em] font-bold mb-2 uppercase">OUR PORTFOLIO</p>
+            <p className="text-gold font-sans text-[10px] tracking-[0.2em] font-bold mb-2 uppercase">OUR GALLERY</p>
             <h1 className="font-serif text-5xl text-charcoal mb-6">Project Showcase</h1>
             <div className="h-[2px] w-24 bg-gold mx-auto mb-4"></div>
             <p className="text-charcoal/70 font-medium">See the quality and craftsmanship we bring to every project</p>
@@ -49,7 +49,7 @@ function Work() {
               {/* After Image (Base Layer) */}
               <div className="relative h-[400px] md:h-[550px] w-full overflow-hidden bg-charcoal">
                 <img 
-                  src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80" 
+                  src={new URL('../../about-1.jpeg', import.meta.url).href} 
                   alt="After" 
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -64,7 +64,7 @@ function Work() {
                 style={{ width: `${sliderPos}%` }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=60" 
+                  src={new URL('../../before.jpeg', import.meta.url).href}
                   alt="Before" 
                   className="absolute inset-0 h-full object-cover max-w-none"
                   style={{ width: 'max(900px, 80vw)' }} // Prevents image shrinking when container narrows

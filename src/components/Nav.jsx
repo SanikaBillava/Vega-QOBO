@@ -9,7 +9,7 @@ function Nav() {
     { to: '/', txt: 'HOME' },
     { to: '/about', txt: 'ABOUT' },
     { to: '/services', txt: 'SERVICES' },
-    { to: '/work', txt: 'WORK' },
+    { to: '/work', txt: 'GALLERY' },
     { to: '/areas', txt: 'AREAS' },
     { to: '/contact', txt: 'CONTACT' }
   ];
