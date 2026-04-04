@@ -7,7 +7,7 @@ import areasData from'../data/areas.json';
 import{PHONE}from'../constants';
 const bgTexture=new URL('../../bg-texture.jpg',import.meta.url).href;
 function Home(){
-const slides=[{img:'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',alt:'Modern home exterior',title:'Premium Concrete Solutions',desc:'Transform your outdoor spaces'},{img:'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=80',alt:'Elegant driveway',title:'Expert Paver Installation',desc:'Enhance your property value'},{img:'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80',alt:'Beautiful patio',title:'Custom Concrete Designs',desc:'Built to last a lifetime'}];
+const slides=[{img:new URL('../../bar-flip.jpeg', import.meta.url).href,alt:'Modern home exterior',title:'Premium Concrete Solutions',desc:'Transform your outdoor spaces'},{img:new URL('../../home1.jpeg', import.meta.url).href,alt:'Elegant driveway',title:'Expert Paver Installation',desc:'Enhance your property value'},{img:new URL('../../home2.jpeg', import.meta.url).href,alt:'Beautiful patio',title:'Custom Concrete Designs',desc:'Built to last a lifetime'}];
 const why=[{icon:Trophy,title:'Experienced Professionals',desc:'Skilled craftsmen with years of expertise'},{icon:Gem,title:'High-Quality Materials',desc:'We use only the best materials'},{icon:DollarSign,title:'Affordable Pricing',desc:'Competitive rates without compromising quality'},{icon:Clock,title:'On-Time Delivery',desc:'Projects delivered on schedule, guaranteed'}];
 return(
 <div style={{backgroundImage:`linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url(${bgTexture})`,backgroundRepeat:'repeat',backgroundSize:'auto'}}>
